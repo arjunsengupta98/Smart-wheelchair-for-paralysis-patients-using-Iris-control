@@ -1,10 +1,10 @@
-# Save as client.py 
+#this code shall run on the laptop
 # Message Sender
 import os
 from socket import *
 import cv2
 import numpy as np
-host = "192.168.43.46" # set to IP address of target computer
+host = "192.168.43.46" # set to IP address of target computer....this is the IP of my RaspberryPi
 port = 13000
 addr = (host, port)
 UDPSock = socket(AF_INET, SOCK_DGRAM)
@@ -12,7 +12,7 @@ UDPSock = socket(AF_INET, SOCK_DGRAM)
 eye_cascade=cv2.CascadeClassifier('parojosG.xml')
 
 cap=cv2.VideoCapture(0)
-cap1=cv2.VideoCapture(1)
+#cap1=cv2.VideoCapture(1)
 direction=b'forward'
 cnt=0
 roi_gray=cv2.imread('randompic2.jpg')
@@ -20,7 +20,7 @@ kernel=np.ones((4,4),np.uint8)
 resize=cv2.imread('randompic2.jpg')
 while 1:
     ret,img=cap.read()
-    ret1,im1=cap1.read()
+    #ret1,im1=cap1.read()
     #cv2.imshow('WebcamVideo',im1)
     #cv2.imshow('LaptopVideo',img)
     gray=cv2.cvtColor(img,cv2.COLOR_BGR2GRAY)
