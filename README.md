@@ -17,7 +17,7 @@ As you have noticed, the code that I have currently uploaded is in a very rough 
 * Feature to activate and deactivate Iris control by a combination of blinks
 * Feature for obstacle avoidance in case of emergency braking due to sudden appearance of obstacle
 
-# How to get the project to work?
+## How to get the project to work?
 
 Hardware plays an essential role in the project. First of all, gather the components:
 * Raspberry Pi 3b 
@@ -38,3 +38,9 @@ Diving into the software, you need to perform the following steps:
 * Establish a connection between the RaspberryPi and laptop by connecting them to the same WiFi network
 * Now, run the eyeServer.py code on the raspberryPi. It will display a message saying "waiting for sender to recieve data"
 * Then go to your laptop, run the eyeClient.py code, with the webcam in front of your eye. A live video window of your eye will appear and it will continuously show the direction in which you are looking (left'right/forward). This data is sent to the raspberry pi and the robot will implement the corresponding command.
+
+As you can see, a bit of socket programming has also been used in this project. The upcomming versions of the codes shall import various other python libraries such as dlib etc. which you will need to download before running the code. But for now, these simple procedures shall work.
+
+Stay tuned for the improved, upcomming version of code. Meanwhile, try running these on an actual robot. Play around and have some fun with code!
+Any positive contributions to the codes/ suggestions for the project would be much appreciated.
+Cheers!
