@@ -41,9 +41,9 @@ Diving into the software, you need to perform the following steps:
 * Save the eyeServer.py code in the Desktop directory of the raspberryPi (or any other convenient directory on the Raspberry Pi)
 * Establish a connection between the RaspberryPi and laptop by connecting them to the same WiFi network
 * Now, run the eyeServer.py code on the raspberryPi. It will display a message saying "waiting for sender to recieve data"
-* Then go to your laptop, run the EyeClient.py code, with the webcam in front of your eye. A live video window of your eye will appear and it will continuously show the direction in which you are looking (left'right/forward). This data is sent to the raspberry pi and the robot will implement the corresponding command.
+* Next, on your laptop, run the EyeClient.py code, with the webcam in front of your eye. A live video window of your eye will appear where the processing is being done and there will be an output on the screen which shall continuously show the direction in which you are looking (left/right/forward). This data is sent to the raspberry pi and the robot will implement the corresponding command by movement combinations of wheels.
 
-As you can see, a bit of socket programming has also been used in this project. The upcomming versions of the codes shall import various other python libraries such as dlib etc. which you will need to download before running the code. But for now, these simple procedures shall work.
+If you are familiar with basic image processing on OpenCV, you will easily be able to understand the algorithm that I have created by extrapolating from the EyeClient.py code itself. I have used a 'haarcascade' of an eye, thereby identifying the eye in the live video window being recorded, and done processing on that part of the image (applying my algorithm only to the right eye). As you can see, a bit of socket programming has also been used in this project. The upcomming versions of the codes shall import various other python libraries such as dlib etc. which you will need to download before running the code. But for now, these simple procedures shall work.
 
 Stay tuned for the improved, upcomming version of code. Meanwhile, try running these on an actual robot. Play around and have some fun with code!
 Any positive contributions to the codes/ suggestions for the project would be much appreciated.
