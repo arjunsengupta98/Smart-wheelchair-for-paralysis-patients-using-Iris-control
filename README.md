@@ -33,11 +33,15 @@ Hardware plays an essential role in the project. First of all, gather the compon
 I wont't go much into hardware assembly of the robot. You need to make a normal 2 wheel driven robot using the Raspberry Pi. The internet is flooded with numerous tutorials for this purpose.
 Diving into the software, you need to perform the following steps:
 * Install openCV for python on your laptop
-* Create a new directory and store the EyeClient.py, randompic2.jpg and the xml file - all of these 3 items in that directory
-* Save the eyeServer.py code on the raspberryPi attached to the robot
+* Create a new folder and give it any name such as Smart_Wheelchair. Store the following 3 files in the Smart_Wheelchair folder:
+1) EyeClient.py 
+2) randompic2.jpg  
+3) parojosG.xml 
+* Access the OS of the raspberryPi (that is fixed on the robot) either through remote desktop applications such as VNCViewer, or directly view the OS through a separate computer monitor using HDMI output.
+* Save the eyeServer.py code in the Desktop directory of the raspberryPi (or any other convenient directory on the Raspberry Pi)
 * Establish a connection between the RaspberryPi and laptop by connecting them to the same WiFi network
 * Now, run the eyeServer.py code on the raspberryPi. It will display a message saying "waiting for sender to recieve data"
-* Then go to your laptop, run the eyeClient.py code, with the webcam in front of your eye. A live video window of your eye will appear and it will continuously show the direction in which you are looking (left'right/forward). This data is sent to the raspberry pi and the robot will implement the corresponding command.
+* Then go to your laptop, run the EyeClient.py code, with the webcam in front of your eye. A live video window of your eye will appear and it will continuously show the direction in which you are looking (left'right/forward). This data is sent to the raspberry pi and the robot will implement the corresponding command.
 
 As you can see, a bit of socket programming has also been used in this project. The upcomming versions of the codes shall import various other python libraries such as dlib etc. which you will need to download before running the code. But for now, these simple procedures shall work.
 
